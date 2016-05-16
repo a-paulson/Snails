@@ -17,7 +17,6 @@ class ControllerBase
 
   # Setup the controller
   def initialize(req, res, params = {})
-    # byebug
     @req = req
     @res = res
     @params = @req.params.merge(params)
