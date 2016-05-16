@@ -4,7 +4,7 @@ Snails is light weight Ruby web framework based on the MVC pattern. It was devel
 
 ## Features & Implementation
 
-### SQLObject
+### ORM: SQL Objects
 
 Snails implements as fully hand rolled ORM that wraps database rows in Ruby objects. This allows for data to be retrieved and manipulated and using Ruby code. Associations can  be defined at the model level allowing these Ruby objects to correctly implement foreign key associations. While Snails currently only supports SQLite we hope to add PostrgreSQL support in the near future.
 
@@ -38,7 +38,7 @@ def insert
 end
 ```
 
-### Stackable and Lazy Queries
+### ORM: Stackable and Lazy Queries
 
 Snails' ORM implements a `where` method that is both stackable and lazy. Queries are kept in a relation object as raw SQL until the results of the query are needed. `method_missing` is used to determine when the query needs to be executed. If a relation object is confronted with a method it cannot identify, `method_missing` executes the query, returns a collection of Ruby objects and executes they original method on this collection. Results of run queries are cached to increase speed.
 
