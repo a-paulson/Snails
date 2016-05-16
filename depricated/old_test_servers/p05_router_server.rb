@@ -1,6 +1,6 @@
 require 'rack'
-require_relative '../lib/controller_base'
-require_relative '../lib/router'
+require_relative '../../.snails/lib/rails_lite/controller_base'
+require_relative '../../.snails/lib/rails_lite/router'
 
 
 $cats = [

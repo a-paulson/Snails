@@ -35,7 +35,6 @@ class ExceptionMiddleware
   end
 
   def surrounding_lines(backtrace)
-    #byebug
    arr = backtrace.first.split(":")
 
    file_name = arr[0]
